@@ -1,0 +1,132 @@
+
+#Reload keybindings
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#Open apps shortcuts
+
+#Launch st ( terminal emulator )
+super + Return
+	st 
+
+#Launch Rofi ( application launcher )
+super + r
+	rofi -config "~/.config/rofi/launcher.rasi" -show drun
+
+#Launch Clipboard manager
+super + c
+	clipboard
+
+#Get token to clipboard
+super + g
+	SystemUtils copy
+
+#Pair with bluetooth headphones
+super + b
+	SystemUtils bluetooth
+
+#Lauch Playlist selector
+super + m
+	select_playlist
+
+#Show all dunst notifications
+super + n 
+	dunstctl history-pop
+#Function Keys
+
+#Toggle between us and sk keyboard layout
+@F12
+	SystemUtils keyboard
+
+#Take screenshot ( select )
+@F11
+	SystemUtils screenshot
+
+#Take screenshot ( fullscreen )
+super + @F11
+	SystemUtils fullscreenshot
+
+#Turn on/off airplane mode ( turn wifi off/on )
+@F10 
+	SystemUtils wifi
+
+#@F9 #Launch some gui for external monitors or connect to specific monitor
+#script here
+
+#Increase brightness
+@F8
+	brightness +
+
+#Decrease brightness
+@F7
+	brightness -
+
+#Forward a song ( in mpd )
+@F6
+	SystemUtils audio forward
+
+#Pause/resume current song ( in mpd )
+@F5
+	SystemUtils audio pause
+
+#Back a song ( in mpd )
+@F4 
+	SystemUtils audio backward
+
+#Increase volume
+@F3
+	SystemUtils volumeup
+
+#Decrease volume
+@F2
+	SystemUtils volumedown
+
+#Mute/unmute volume
+@F1
+	SystemUtils mute
+
+#Bspwm shortcuts
+
+#General
+
+#Change to standard workspace
+super + {1-6}
+	bspc desktop -f '^{2-7}'
+
+#Change to home workspace 
+super + 7
+	bspc desktop -f '^1'
+
+#Reboot bspwm
+super + shift + r
+	bspc quit
+
+#Window manipulation
+
+#Close window
+super + q
+	bspc node -{c,k}
+
+#Expand window
+super + {h,j,k,l}
+	bspc node -z {left -60 0,top 0 -60,bottom 0 60,right 60 0}
+
+#Shrink window
+super + shift  + {h,j,k,l}
+	bspc node -z {left 60 0,top 0 60,bottom 0 -60,right -60 0}
+
+#Move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#Set the window state
+super + {a,s,d}
+	bspc node -t {floating,tiled,fullscreen}
+
+#Change focus to next window
+super + f
+	bspc node -f next.local.window
+
+#Send window to different standard workspace
+super + shift + {1-6}
+	bspc node -d '^{2-7}'
