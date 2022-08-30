@@ -21,7 +21,10 @@ Install arch with this guide: -
 
 Install dependencies
 ```
-yay -S bspwm sxhkd fish polybar ttf-material-design-icons-webfont ttf-jetbrains-mono picom rofi clipster oranchelo-icon-theme dunst pulseaudio pulse-bluetooth pulsemixer mpd mpc  
+yay -S bspwm sxhkd fish polybar ttf-material-design-icons-webfont ttf-jetbrains-mono picom rofi clipster oranchelo-icon-theme dunst pulseaudio pulse-bluetooth pulsemixer mpd mpc nodejs npm python kpcli brightnessctl bluetoothctl
+```
+```
+pip install pypresence youtube-dl yt-dlp
 ```
 
 # Keybinds
