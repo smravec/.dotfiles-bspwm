@@ -21,7 +21,7 @@ Install arch with this guide: -
 
 Install dependencies
 ```
-yay -S bspwm sxhkd fish polybar ttf-material-design-icons-webfont ttf-jetbrains-mono picom rofi clipster oranchelo-icon-theme dunst pulseaudio pulse-bluetooth pulsemixer mpd mpc nodejs npm python kpcli brightnessctl bluetoothctl
+yay -S bspwm sxhkd fish polybar ttf-material-design-icons-webfont ttf-jetbrains-mono picom rofi clipster oranchelo-icon-theme dunst pulseaudio pulse-bluetooth pulsemixer mpd mpc nodejs npm python kpcli brightnessctl bluetoothctl discord signal-desktop vscodium-bin superproductivity-bin cmatrix oneko cava xf86-video-intel xcursor-breeze vlc unclutter tty-clock-git shotcut ranger pfetch ocenaudio-bin feh colorpicker krita gtop
 ```
 ```
 pip install pypresence youtube-dl yt-dlp
@@ -51,8 +51,8 @@ pip install pypresence youtube-dl yt-dlp
 
 | Keybind|   Command |
 |:------:|:---------:|
-|ctrl + z|    Zoom   |
-|ctrl + x|   Unzoom  |
+|ctrl + z|   Zoom    |
+|ctrl + x|  Unzoom   |
 |ctrl + o| Scroll up |
 |ctrl + p|Scroll down|
 
