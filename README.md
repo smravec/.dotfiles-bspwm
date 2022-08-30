@@ -21,7 +21,7 @@ Install arch with this guide: -
 
 Install dependencies
 ```
-yay -S bspwm sxhkd fish polybar ttf-material-design-icons-webfont picom rofi clipster oranchelo-icon-theme dunst mpd mpc 
+yay -S bspwm sxhkd fish polybar ttf-material-design-icons-webfont ttf-jetbrains-mono picom rofi clipster oranchelo-icon-theme dunst mpd mpc 
 ```
 
 # Keybinds
