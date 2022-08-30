@@ -2,34 +2,26 @@
 
 # Preview
 
-# Docs
 
-## Keybinds
+# Keybinds
+|    Keybind      |             Command                  |
+|:---------------:|:------------------------------------:|
+|   super + Enter |              Term                    |
+|    super + r    |             Launcher                 |
+|    super + c    |            Clipboard                 |
+|    super + m    |              Music                   |
+| super + {a,s,d} | Floating, Tiled or Fullscreen state  |
+| super + q       |          Close Window                |
+|super + Shift + r|            Restart X                 |
+|     super + f   |           Change focus               |
 
-Mod1 + Enter Term
+*super = Windows Key
 
-Mod1 + r Launcher
+# TCP ports used
 
-Mod1 + c Clipboard
-
-Mod1 + m Music
-
-Mod1 + {a,s,d} Floating, Tiled or Fullscreen state 
-
-Mod1 + q Close Window
-
-Mod1 + Shift + r Restart X
-
-Mod1 + f Change focus
-
-*Mod1 = Windows Key
-
-## TCP ports used
-
-3001 = music
-
-3002 = keyboard
-
-3003 = brightness
-
-3004 = volume
+|Port |   Script   |
+|:---:|:----------:|
+|3001 |  music     |
+|3002 | keyboard   |
+|3003 | brightness |
+|3004 |  volume    |
