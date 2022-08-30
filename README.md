@@ -45,7 +45,7 @@ pip install pypresence youtube-dl yt-dlp
 |   super + g     |          Copy git token              |
 |   super + m     |         Select playlist              |
 
-*super = Windows Key
+****super = Windows Key***
 
 ## St Keybinds
 
