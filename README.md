@@ -65,3 +65,4 @@ pip install pypresence youtube-dl yt-dlp
 |3002 | keyboard   |
 |3003 | brightness |
 |3004 |  volume    |
+|3005 |   wifi     |
