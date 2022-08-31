@@ -22,7 +22,7 @@ Install arch with this guide: -
 
 Install dependencies
 ```
-yay -S bspwm sxhkd fish polybar ttf-material-design-icons-webfont ttf-jetbrains-mono picom rofi clipster oranchelo-icon-theme dunst pulseaudio pulse-bluetooth pulsemixer mpd mpc nodejs npm python kpcli brightnessctl bluetoothctl discord signal-desktop vscodium-bin superproductivity-bin cmatrix oneko cava xf86-video-intel xcursor-breeze vlc unclutter tty-clock-git shotcut ranger pfetch ocenaudio-bin feh colorpicker krita gtop
+yay -S bspwm sxhkd fish polybar ttf-material-design-icons-webfont ttf-jetbrains-mono picom rofi clipster oranchelo-icon-theme dunst pulseaudio pulse-bluetooth pulsemixer mpd mpc nodejs npm python kpcli brightnessctl bluetoothctl discord signal-desktop vscodium-bin superproductivity-bin cmatrix oneko cava xf86-video-intel xcursor-breeze vlc unclutter tty-clock-git shotcut ranger pfetch ocenaudio-bin feh colorpicker krita gtop pipes.sh
 ```
 ```
 pip install pypresence youtube-dl yt-dlp
@@ -30,7 +30,7 @@ pip install pypresence youtube-dl yt-dlp
 
 # Keybinds
 
-## Wm Keybinds
+## Wm and Other Keybinds
 
 |    Keybind      |             Command                  |
 |:---------------:|:------------------------------------:|
@@ -39,12 +39,13 @@ pip install pypresence youtube-dl yt-dlp
 |   super + c     |            Clipboard                 |
 |   super + m     |              Music                   |
 | super + {a,s,d} | Floating, Tiled or Fullscreen state  |
-| super + q       |          Close Window                |
+|   super + q     |          Close Window                |
 |super + Shift + r|            Restart X                 |
 |   super + f     |           Change focus               |
 |   super + b     |       Connect to headphones          |
 |   super + g     |          Copy git token              |
 |   super + m     |         Select playlist              |
+|   super + n     |    Show all Dunst notifications      |
 
 ****super = Windows Key***
 
@@ -56,13 +57,3 @@ pip install pypresence youtube-dl yt-dlp
 |ctrl + x|  Unzoom   |
 |ctrl + o| Scroll up |
 |ctrl + p|Scroll down|
-
-# TCP ports used
-
-|Port |   Script   |
-|:---:|:----------:|
-|3001 |  music     |
-|3002 | keyboard   |
-|3003 | brightness |
-|3004 |  volume    |
-|3005 |   wifi     |
