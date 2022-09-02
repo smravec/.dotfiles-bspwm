@@ -45,7 +45,7 @@ pip install pypresence youtube-dl yt-dlp
 |   super + b     |       Connect to headphones          |
 |   super + g     |          Copy git token              |
 |   super + m     |         Select playlist              |
-|   super + n     |    Show all Dunst notifications      |
+|   super + n     |    Show last Dunst notification      |
 
 ****super = Windows Key***
 
