@@ -10,9 +10,11 @@ def current_bat_level():
     
     #Format bat level
     bat_level = bat_status.split(",")[1]
+    print(bat_level)
+    
+    bat_level = bat_level.strip()
     bat_level = bat_level[:-1]
-    bat_level = bat_level.strip(" ")
-
+    
     return int(bat_level)
 
 def is_charging():
@@ -24,7 +26,7 @@ def is_charging():
 
     bat_status = acpi.stdout.decode("utf-8")
    
-    if bat_status == "":
+    if bat_status == "" and current_bat_level() != 100:
         charging = "%{T3}󱐋%{T-}"
 
     return charging
