@@ -1,0 +1,86 @@
+*{
+    normal-background: #d5dee0;
+    normal-foreground: #222222;
+    alternate-normal-background: #d5dee0;
+    alternate-normal-foreground: #111111;
+    selected-normal-background: #222222;
+    selected-normal-foreground: #ffffff;
+}
+
+configuration{
+    lines: 5;
+    font: "JetBrainsMono Nerd Font 22";
+    location: 0;
+    disable-history: true;
+    hide-scrollbar: true;
+}
+
+window {
+    width: 650px;
+    height: 450px;
+    location: north west;
+    anchor: north west;
+    x-offset: 803px;        
+    y-offset: 450px;
+    border: 1px;
+    background-color: #d5dee0;
+    border-color: #949492;
+    border-radius: 5px;
+}
+
+prompt {
+    margin: 2px 10px 0px -7px;
+    padding: 0px 0px 0px 0px;
+    font: "JetBrainsMono Nerd Font 30";
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+inputbar {
+    children: [prompt];
+    padding: 2px;
+    margin: 10px 20px 30px 20px;
+    padding: 0px 20px 10px 160px;
+    expand: false;
+    border: 0px 0px 2px 0px;
+    border-color: #949492; 
+}
+
+listview {
+    background-color: #00000000;
+    dynamic: true;
+    spacing: 32px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px 40px 0px 40px;
+    scrollbar: false;
+    width: 10px;
+    columns: 1;
+    font: "JetBrainsMono Nerd Font 20";
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    padding: 7px;
+    spacing: 5px;
+}
+
+element-text {
+    	horizontal-align: 0.47;
+	font: "JetBrainsMono Nerd Font 22";
+	padding: 2px;	
+}
+
+element {
+    padding: 10px 5px 5px 5px;
+    width: 5px;
+    background-color: #1A1B26;
+    text-color: #a9b6f5  ;
+    font: "JetBrainsMono Nerd Font 20";
+    border: 1px;
+    border-radius: 10px;
+    border-color: #666565;
+}

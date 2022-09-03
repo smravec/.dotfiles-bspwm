@@ -1,0 +1,103 @@
+*{
+    normal-background: #d5dee0;
+    normal-foreground: #000000;
+    alternate-normal-background: #d5dee0;
+    alternate-normal-foreground: #000000;
+    selected-normal-background: #222222;
+    selected-normal-foreground: #ffffff;
+}
+
+configuration{
+    modi: "drun";
+    lines: 5;
+    show-icons: true;
+    font: "JetBrainsMono Nerd Font 22";
+    terminal: "alacritty";
+    drun-display-format: "{name}";
+    location: 0;
+    disable-history: true;
+    hide-scrollbar: true;
+    display-drun: "󱩾";
+}
+
+window {
+    width: 650px;
+    height: 450px;
+    location: north west;
+    anchor: north west;
+    x-offset: 803px;        
+    y-offset: 450px;
+    border: 2px;
+    background-color: #d5dee0;
+    border-color: #949492;
+    border-radius: 5px;
+}
+
+entry {
+    background-color: transparent;
+    text-color: #000000;
+    placeholder-color: #444444;
+    placeholder: "Search";
+    blink: true;
+    font: "JetBrainsMono Nerd Font 25";
+    margin: 10px 0px 0px 0px;
+}
+
+prompt {
+    margin: 2px 10px 0px 40px;
+    padding: 0px 0px 0px 0px;
+    font: "JetBrainsMono Nerd Font 35";
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+inputbar {
+    children: [prompt,entry];
+    padding: 2px;
+    margin: 10px 20px 20px 20px;
+    padding: 0px 20px 10px 160px;
+    expand: false;
+    border: 0px 0px 2px 0px;
+    border-color: #949492; 
+}
+
+listview {
+    background-color: #00000000;
+    dynamic: true;
+    spacing: 0px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px 60px 0px 60px;
+    scrollbar: false;
+    width: 50px;
+    columns: 1;
+    font: "JetBrainsMono Nerd Font 20";
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    padding: 7px;
+    spacing: 5px;
+}
+
+element {
+    padding: 10px 10px 10px 10px;
+    width: 20px;
+    background-color: #1A1B26;
+    text-color: #a9b6f5  ;
+    font: "JetBrainsMono Nerd Font 20";
+    border-radius: 10px;
+}
+element-icon{
+    size:45px;
+    background-color: #cccccc;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+element-text{
+    margin: 15px 0px 0px 20px;
+}

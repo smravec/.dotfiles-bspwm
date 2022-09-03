@@ -1,0 +1,83 @@
+*{
+    normal-background: #d5dee0;
+    normal-foreground: #000000;
+    alternate-normal-background: #d5dee0;
+    alternate-normal-foreground: #000000;
+    selected-normal-background: #222222;
+    selected-normal-foreground: #ffffff;
+}
+
+configuration{
+    modi: "drun";
+    lines: 5;
+    font: "JetBrainsMono Nerd Font 20";
+    terminal: "alacritty";
+    drun-display-format: "{name}";
+    location: 0;
+    disable-history: true;
+    hide-scrollbar: true;
+}
+
+window {
+    width: 650px;
+    height: 450px;
+    location: north west;
+    anchor: north west;
+    x-offset: 803px;        
+    y-offset: 450px;
+    border: 2px;
+    background-color: #d5dee0;
+    border-color: #949492;
+    border-radius: 5px;
+
+}
+
+prompt {
+    margin: 5px 10px 0px 38px;
+    padding: 0px 0px 0px 0px;
+    font: "JetBrainsMono Nerd Font 30";
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+inputbar {
+    children: [prompt];
+    padding: 2px;
+    margin: 10px 20px 20px 20px;
+    padding: 0px 20px 10px 160px;
+    expand: false;
+    border: 0px 0px 2px 0px;
+    border-color: #949492; 
+}
+
+listview {
+    background-color: #00000000;
+    dynamic: true;
+    spacing: 0px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px 60px 0px 60px;
+    scrollbar: false;
+    width: 50px;
+    columns: 1;
+    font: "JetBrainsMono Nerd Font 20";
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    padding: 7px;
+    spacing: 5px;
+}
+
+element {
+    padding: 15px 5px 10px 20px;
+    margin: 0px 25px 0px 15px;
+    width: 20px;
+    background-color: #1A1B26;
+    text-color: #a9b6f5  ;
+    font: "JetBrainsMono Nerd Font 20";
+    border-radius: 5px;
+}
