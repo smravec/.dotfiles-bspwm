@@ -13,9 +13,12 @@
 - **Music server** [mpd](https://github.com/MusicPlayerDaemon/MPD)
 
 # Instalation
+Clone this repo
+```
+git clone https://github.com/smravec/.dotfiles
+```
 
 ## Os
-
 Install arch with this guide: -
 
 ## Term
