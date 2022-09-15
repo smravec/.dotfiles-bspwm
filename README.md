@@ -18,6 +18,13 @@
 
 Install arch with this guide: -
 
+## Term
+Compile st
+```
+cd .dotfiles/st
+sudo make install
+```
+
 ## Dependencies
 
 Install dependencies
