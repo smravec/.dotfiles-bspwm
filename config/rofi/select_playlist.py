@@ -14,7 +14,7 @@ def check_if_first_startup():
 
     status = subprocess.run("mpc status | grep -o off | wc -l ", shell = True, capture_output = True)
     
-    #Here compares how many things it are off if more than 2 are off, this is first startup
+    #Here compares how many things are off if more than 2 are off, this is first startup
     if int(status.stdout.decode("utf-8")) > 2:
          
         subprocess.run("mpc random", shell = True)
