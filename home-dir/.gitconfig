@@ -1,0 +1,5 @@
+[user]
+	name = yourname
+	email = your.email@client.com
+[pull]
+	rebase = false
