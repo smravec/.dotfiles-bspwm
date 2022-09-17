@@ -32,7 +32,7 @@ sudo make install
 
 Install dependencies
 ```
-yay -S xorg xorg-xinit xclip xcursor-breeze unclutter oranchelo-icon-theme \
+yay -S xorg xorg-xinit xclip xcursor-breeze xcb-util-cursor unclutter oranchelo-icon-theme \
        bspwm sxhkd picom polybar \
        fish \
        ttf-material-desing-icons-webfont ttf-jetbrains-mono \
@@ -41,9 +41,9 @@ yay -S xorg xorg-xinit xclip xcursor-breeze unclutter oranchelo-icon-theme \
        firefox-developer-edition libreoffice vscodium-bin superproductivity-bin ocenaudio-bin krita vlc shotcut \
        discord signal-desktop \
        brightnessctl bluetoothctl \
-       cmatrix oneko cava pfetch feh colorpicker gtop pipes.sh tty-clock-git ranger \
+       cmatrix oneko cava pfetch feh colorpicker gtop pipes.sh tty-clock-git ranger libmagick\
        nodejs npm python python-pip \
-       xf86-video-intel 
+       xf86-video-intel intel-media-driver 
 ```
 ```
 pip install pypresence youtube-dl yt-dlp

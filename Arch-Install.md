@@ -238,7 +238,7 @@ on next reboot check in bios if entry "Arch Linux" is on top of the boot order
 ## Other packages install and setup
 install base packages 
 ```
-pacman -S base-devel networkmanager wpa_supplicant intel-ucode linux-headers git
+pacman -S base-devel networkmanager wpa_supplicant intel-ucode linux-headers git man-pages man-db
 ```
 setup network manager
 ```
