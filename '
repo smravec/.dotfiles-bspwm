@@ -106,7 +106,7 @@ to save all changes press w
 ```
 w
 ```
-## Format partitions
+# Format partitions
 format the EFI, SWAP, ROOT and HOME partitions (and enable swap)
 ```
 mkfs.fat -F32 /dev/nvme0n1p1
@@ -257,8 +257,8 @@ reboot pc and remove usb stick
 ```
 reboot
 ```
-# POST INSTALLATION
-## Pacman and aur
+## POST INSTALLATION
+### Pacman and aur
 download the archlinux-keyring package
 ```
 sudo pacman -S archlinux-keyring
@@ -273,15 +273,8 @@ git clone https://aur.archlinux.org/yay.git
 ```
 install yay
 ```
-cd ./yay
-makepkg -si
+cd 
 ```
+
 ## Silent boot
 Follow arch wiki here: https://wiki.archlinux.org/title/silent_boot 
-
-## Minor last things
-disable beep at shutdown
-```
-touch ~/.xprofile
-echo "xset -b" >> ~/.xprofile
-```
