@@ -139,7 +139,7 @@ arch-chroot /mnt
 ```
 setup clock and timezone again
 ```
-ln -sf /usr/share/zoneinfo/REGION/CITY /etc/localtime
+ln -sf /usr/share/zoneinfo/Europe/Bratislava /etc/localtime
 hwclock --systohc 
 ```
 download vim (basic vim commands: I to enter insert mode, Esc to exit insert mode, to exit and save :wq (also you have to be out of insert mode), to just exit without saving :q! (also you have to be out of insert mode))
@@ -212,30 +212,29 @@ uncomment it e.g.
 save and exit by pressing Ecs and :wq
 
 ## Bootloader (EFISTUB)
-NOT FNISHED
+install efibootmgr
 ```
-bootctl install
+pacman -S efibootmgr
 ```
+get partuuid of your root partition
 ```
-vim /boot/loader/loader.conf
+vim /etc/fstab
 ```
+copy the string next to UUID= (my root partition is /dev/nvme0n1p3)
 ```
-default  arch.conf
-timeout  0
-console-mode max
-editor   no
+# /dev/nvme0n1p3
+UUID=17ccf50c-592a-41c2-ac96-ec3f8157385c	/         	ext4      	rw,relatime	0 1
 ```
+add efi entry (replace after --disk your disk, after --part number of boot partition, after UUID= your UUID of root partition) 
 ```
-touch /boot/loader/entries/arch.conf
-vim /boot/loader/entries/arch.conf
+efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "Arch Linux" --loader /vmlinuz-linux --unicode 'root=UUID=17ccf50c-592a-41c2-ac96-ec3f8157385c rw quiet loglevel=3 rd.systemd.show_status=false rd.udev.log_level=3 vt.global_cursor_default=0 inird=/intel-ucode.img initrd=/initramfs-linux.img'
 ```
+check if everything is correct
 ```
-title   Arch Linux
-linux   /vmlinuz-linux
-initrd  /intel-ucode.img
-initrd  /initramfs-linux.img
-options root=/dev/nvme0n1p3 rw
+efibootmgr -u
 ```
+on next reboot check in bios if entry "Arch Linux" is on top of the boot order
+
 ## Other packages install and setup
 install base packages 
 ```
@@ -260,39 +259,6 @@ reboot
 ```
 ## OTHER
 
+
 ## Silent boot
-remove last login message on boot
-```
-touch ~/.hushlogin
-```
-remove kernel messages on boot
-```
-sudo vim /etc/sysctl.d/20-quiet-printk.conf
-```
-add this line
-```
-kernel.printk = 3 3 3 3
-```
-remove agetty messages
-```
-sudo mkdir /etc/systemd/system/getty@tty1.service.d
-sudo vim /etc/systemd/system/getty@tty1.service.d/autologin.conf
-```
-make this file look like this (replace simon with your user)
-```
-[Service]
-ExecStart=
-ExecStart=-/usr/bin/agetty --skip-login --nonewline --noissue --autologin simon --noclear %I $TERM
-```
-remove fsck messages
-```
-sudo vim /etc/mkinitcpio.conf
-```
-make the line that starts with HOOKS look like this
-```
-HOOKS=(base systemd autodetect modconf block filesystems keyboard fsck)
-```
-regenerate initramfs
-```
-sudo mkinitcpio -P
-```
+Follow arch wiki here: https://wiki.archlinux.org/title/silent_boot 
