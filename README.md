@@ -32,7 +32,18 @@ sudo make install
 
 Install dependencies
 ```
-yay -S bspwm sxhkd fish polybar ttf-material-design-icons-webfont ttf-jetbrains-mono picom rofi clipster oranchelo-icon-theme dunst pulseaudio pulse-bluetooth pulsemixer mpd mpc nodejs npm python kpcli brightnessctl bluetoothctl discord signal-desktop vscodium-bin superproductivity-bin cmatrix oneko cava xf86-video-intel xcursor-breeze vlc unclutter tty-clock-git shotcut ranger pfetch ocenaudio-bin feh colorpicker krita gtop pipes.sh
+yay -S xorg xorg-xinit xclip xcursor-breeze unclutter oranchelo-icon-theme \
+       bspwm sxhkd picom polybar \
+       fish \
+       ttf-material-desing-icons-webfont ttf-jetbrains-mono \
+       pulseaudio pulse-bluetooth pulsemixer mpd mpc \
+       rofi clipster dunst \
+       firefox-developer-edition libreoffice vscodium-bin superproductivity-bin ocenaudio-bin krita vlc shotcut \
+       discord signal-desktop \
+       brightnessctl bluetoothctl \
+       cmatrix oneko cava pfetch feh colorpicker gtop pipes.sh tty-clock-git ranger \
+       nodejs npm python python-pip \
+       xf86-video-intel 
 ```
 ```
 pip install pypresence youtube-dl yt-dlp
