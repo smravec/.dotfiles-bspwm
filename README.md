@@ -41,7 +41,7 @@ yay -S xorg xorg-xinit xclip xcursor-breeze xcb-util-cursor unclutter oranchelo-
        firefox-developer-edition libreoffice vscodium-bin superproductivity-bin ocenaudio-bin krita vlc shotcut \
        discord signal-desktop \
        brightnessctl bluetoothctl \
-       cmatrix oneko cava pfetch feh colorpicker gtop pipes.sh tty-clock-git ranger libmagick\
+       cmatrix oneko cava pfetch feh colorpicker gtop pipes.sh tty-clock-git ranger libmagick \
        nodejs npm python python-pip \
        xf86-video-intel intel-media-driver 
 ```
