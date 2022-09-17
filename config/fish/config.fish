@@ -13,8 +13,8 @@ set -U -x PF_INFO "ascii title os wm shell kernel pkgs"
 if status is-interactive
     	
 	#Global Path
-	set -Ua fish_user_paths /home/simon/.config/fish/scripts
-	set -Ua fish_user_paths /home/simon/.local/bin
+	set -Ua fish_user_paths /home/$USER/.config/fish/scripts
+	set -Ua fish_user_paths /home/$USER/.local/bin
 end
 
 if status --is-login

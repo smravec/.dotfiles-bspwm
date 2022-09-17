@@ -1,4 +1,3 @@
-
 #Reload keybindings
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -15,19 +14,19 @@ super + r
 
 #Launch Clipboard manager
 super + c
-	clipboard
+	~/.config/rofi/clipboard.py
 
 #Get token to clipboard
 super + g
-	SystemUtils copy
+	~/.config/sxhkd/SxhkdUtils copy
 
 #Pair with bluetooth headphones
 super + b
-	SystemUtils bluetooth
+	~/.config/sxhkd/SxhkdUtils bluetooth
 
 #Lauch Playlist selector
 super + m
-	select_playlist
+	~/.config/rofi/select_playlist.py
 
 #Show all dunst notifications
 super + n 
@@ -36,54 +35,54 @@ super + n
 
 #Toggle between us and sk keyboard layout
 @F12
-	SystemUtils keyboard
+	~/.config/sxhkd/SxhkdUtils keyboard
 
 #Take screenshot ( select )
 @F11
-	SystemUtils screenshot
+	~/.config/sxhkd/SxhkdUtils screenshot
 
 #Take screenshot ( fullscreen )
 super + @F11
-	SystemUtils fullscreenshot
+	~/.config/sxhkd/SxhkdUtils fullscreenshot
 
 #Turn on/off airplane mode ( turn wifi off/on )
 @F10 
-	SystemUtils wifi
+	~/.config/sxhkd/SxhkdUtils wifi
 
 #@F9 #Launch some gui for external monitors or connect to specific monitor
 #script here
 
 #Increase brightness
 @F8
-	brightness +
+	~/.config/polybar/scripts/brightness.py keypress +
 
 #Decrease brightness
 @F7
-	brightness -
+	~/.config/polybar/scripts/brightness.py keypress -
 
 #Forward a song ( in mpd )
 @F6
-	SystemUtils audio forward
+	~/.config/sxhkd/SxhkdUtils audio forward
 
 #Pause/resume current song ( in mpd )
 @F5
-	SystemUtils audio pause
+	~/.config/sxhkd/SxhkdUtils audio pause
 
 #Back a song ( in mpd )
 @F4 
-	SystemUtils audio backward
+	~/.config/sxhkd/SxhkdUtils audio backward
 
 #Increase volume
 @F3
-	SystemUtils volumeup
+	~/.config/sxhkd/SxhkdUtils volumeup
 
 #Decrease volume
 @F2
-	SystemUtils volumedown
+	~/.config/sxhkd/SxhkdUtils volumedown
 
 #Mute/unmute volume
 @F1
-	SystemUtils mute
+	~/.config/sxhkd/SxhkdUtils mute
 
 #Bspwm shortcuts
 

@@ -1,0 +1,145 @@
+#!/usr/bin/fish
+
+#Main script for sxhkd
+#Collection of fish scripts to control your system
+
+#Parse input arguments
+set input (string split "" $argv[2])
+
+#BRIGHTNESS
+#Change backlight brightness of screen
+
+if [ $argv[1] = "brightness" ]
+	
+	#Plus
+	if [ $argv[2] = "+" ]
+	    if [ (brightnessctl g)  ]
+	    
+	    end
+	end
+
+	#Minus 960 12000 24000 40000 68000 83000 96000
+	if [ $argv[2] = "-" ]  
+	    if [ (brightnessctl g) -lt 830000 ]
+		brightnessctl -s 830000
+	    
+	    else
+		if [ (brightnessctl g) -lt 68000 ]
+		
+
+		end
+
+	    end
+	end
+end
+
+#COPY TO CLIPBOARD
+#Copy any token you want to clipboard
+
+if [ $argv[1] = "copy" ] 
+	set token "" #Token you want to copy to clipboard
+	echo -n  $token | xclip -selection clipboard
+end
+
+#VOLUME
+#Change or mute volume
+
+if [ $argv[1] = "volumeup" ]
+	set current_volume ( pulsemixer --get-volume | string split " " )
+	if [ $current_volume[1] -lt 100 ]
+		pulsemixer --change-volume +10
+	end
+end
+
+if [ $argv[1] = "volumedown" ]
+	set current_volume ( pulsemixer --get-volume | string split " " )
+	if [ $current_volume[1] -gt 10 ]
+		pulsemixer --change-volume -10
+	end
+end
+
+if [ $argv[1] = "mute" ]
+	set current_state ( pulsemixer --get-mute )
+
+	if [ $current_state = 1 ]
+		pulsemixer --unmute
+	else
+		pulsemixer --mute
+	end
+end
+
+#MUSIC
+#Forward, backward or pause/resume a song
+
+if [ $argv[1] = "audio" ]
+	
+	if [ $argv[2] = "forward" ]
+		mpc next
+		check_status keypress
+	end
+
+	if [ $argv[2] = "backward" ]
+		mpc prev
+		check_status keypress
+	end
+
+	if [ $argv[2] = "pause" ]
+		
+		if test (mpc status | grep paused) 
+			mpc play
+
+		else
+			mpc pause 
+			
+		end
+	end
+end
+
+#SCREENSHOT
+#Take a screenshot and saves it in specified path
+
+if [ $argv[1] = "screenshot" ]
+
+	set screen_num ( ls ~/Pictures/Screenshots | wc -l )
+	scrot -s ~/Pictures/Screenshots/"Screenshot-%d|%m-("$screen_num").png"
+end
+
+if [ $argv[1] = "fullscreenshot" ]
+	
+	set screen_num ( ls /home/simon/Pictures/Screenshots | wc -l )
+	scrot ~/Pictures/Screenshots/"Fullscreenshot-%d|%m-("$screen_num").png"
+end
+
+#KEYBOARD LAYOUT
+#Toggle between any 2 keyboard layouts
+
+if [ $argv[1] = "keyboard" ]
+	if setxkbmap -query | grep -q us
+		setxkbmap sk
+	else
+		setxkbmap us
+	end
+end
+
+#BLUETOOTH HEADPHONES
+#Connects to bluetooth headphones via bluetoothctl
+
+if [ $argv[1] = "bluetooth" ]
+	echo -e "power on" | bluetoothctl
+	sleep 3
+	echo -e "connect 04:CB:88:C8:1D:A4" | bluetoothctl #Replace this with your bluetooth device
+end
+
+#WIFI
+#Turns wifi on/off
+
+if [ $argv[1] = "wifi" ]
+	
+	if [ (nmcli radio wifi) = "enabled" ]
+
+		nmcli radio wifi off
+	else
+		
+		nmcli radio wifi on
+	end
+end
