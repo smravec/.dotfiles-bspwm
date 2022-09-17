@@ -1,0 +1,75 @@
+#! /bin/sh
+
+#RANDOM FIXES
+
+#Cross cursor fix
+xsetroot -cursor_name left_ptr &
+unclutter &
+
+#Autofocusing on browsers fix
+bspc config ignore_ewmh_focus true
+
+#Set brightness
+brightnessctl s 68000
+
+#KEYBINDS
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+#BAR
+polybar top &
+polybar bottom &
+
+#CLIPBOARD MANAGER
+clipster -d &
+
+#MPD SETUP
+mpd &
+
+check_status loop &
+
+#NOTIFICATIONS
+dunst &
+
+#SPAWN APPS AT STARTUP
+
+#TERMINAL
+echo "sleep 1" | fish && st -c Terminal &
+bspc rule -a Terminal state=tiled desktop=2
+
+#CODING
+echo "sleep 1" | fish && st -c Coding &
+bspc rule -a Coding state=tiled desktop=3
+
+#BROWSER
+
+firefox-developer-edition &
+bspc rule -a firefoxdeveloperedition state=tiled desktop=4 border=off
+
+#WEBDEV
+vscodium &
+bspc rule -a VSCodium state=tiled desktop=5 
+
+#TASKS
+superproductivity &
+bspc rule -a superProductivity state=tiled desktop=6
+
+#COMUNICATION
+signal-desktop &
+bspc rule -a Signal state=tiled desktop=7 
+
+discord &
+bspc rule -a discord state=tiled desktop=7 split_ratio=0.3
+
+#Discord rich presence status
+~/.config/bspwm/dispresence &
+
+#WORKSPACES
+bspc monitor -d 1 2 3 4 5 6 7
+
+bspc config border_width         1
+bspc config window_gap			12
+bspc config focused_border_color "#bbbbbb"
+bspc config normal_border_color "#666666"   
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
