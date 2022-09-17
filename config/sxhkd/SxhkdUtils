@@ -6,33 +6,6 @@
 #Parse input arguments
 set input (string split "" $argv[2])
 
-#BRIGHTNESS
-#Change backlight brightness of screen
-
-if [ $argv[1] = "brightness" ]
-	
-	#Plus
-	if [ $argv[2] = "+" ]
-	    if [ (brightnessctl g)  ]
-	    
-	    end
-	end
-
-	#Minus 960 12000 24000 40000 68000 83000 96000
-	if [ $argv[2] = "-" ]  
-	    if [ (brightnessctl g) -lt 830000 ]
-		brightnessctl -s 830000
-	    
-	    else
-		if [ (brightnessctl g) -lt 68000 ]
-		
-
-		end
-
-	    end
-	end
-end
-
 #COPY TO CLIPBOARD
 #Copy any token you want to clipboard
 
