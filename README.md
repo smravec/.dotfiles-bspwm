@@ -6,7 +6,7 @@
 - **Term:** [st](https://st.suckless.org)
 - **Bar** [polybar](https://github.com/polybar/polybar)
 - **Compositor** [picom](https://github.com/yshui/picom)
-- **Editor** [nevim](https://github.com/neovim/neovim)
+- **Editor** [neovim](https://github.com/neovim/neovim)
 - **Application Launcher** [rofi](https://github.com/davatorium/rofi)
 - **GTK Theme** [oranchelo](https://github.com/OrancheloTeam/oranchelo-icon-theme)
 - **Notification Daemon** [dunst](https://github.com/dunst-project/dunst)
@@ -15,7 +15,7 @@
 # Instalation
 
 ## Os
-Install Arch with this guide: <a src=Arch-Install.md>Arch-Install.md<a/>
+Install Arch with this guide: <a href=Arch-Install.md>Arch-Install.md<a/>
 
 ## Dotfiles
 Clone this repo to home directory
@@ -49,8 +49,8 @@ copy your git token on set token "" (line 13, COPY TO CLIPBOARD section) into ""
 ```
 vim ~/.dotfiles/config/sxhkd/SxhkdUtils 
 ```
-pair bluetooth headphones with this guide - https://wiki.archlinux.org/title/bluetooth#Pairing
-copy the id into clipboard (can look like: 04:CB:88:C8:1D:A4) 
+pair bluetooth headphones with this guide - https://wiki.archlinux.org/title/bluetooth#Pairing <br/>
+copy the id into clipboard (can look like: 04:CB:88:C8:1D:A4) <br/>
 and paste it next to connect (leave one space between connect and id) (line 103, BLUETOOTH HEADPHONES section)  
 ```
 vim ~/.dotfiles/config/sxhkd/SxhkdUtils 
