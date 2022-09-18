@@ -118,3 +118,10 @@ nvim
 |ctrl + p|Scroll down|
 
 # Gallery
+<div align="center" >
+
+<img src="Preview2.png"/>
+<img src="Preview3.png"/>
+<img src="Preview4.png"/>
+
+<div/>
