@@ -84,6 +84,10 @@ copy all the dotfiles
 cp -r ~/.dotfiles/config/* ~/.config/
 cp -r ~/.dotfiles/home-dir/* ~/
 ```
+refresh font cache
+```
+fc cache -fv
+```
 
 ## Term
 compile st
