@@ -258,6 +258,10 @@ reboot pc and remove usb stick
 reboot
 ```
 # POST INSTALLATION
+connect to internet
+```
+sudo nmtui
+```
 ## Pacman and aur
 download the archlinux-keyring package
 ```

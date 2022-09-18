@@ -7,7 +7,7 @@
 set input (string split "" $argv[2])
 
 #COPY TO CLIPBOARD
-#Copy any token you want to clipboard
+#Copy git token to clipboard
 
 if [ $argv[1] = "copy" ] 
 	set token "" #Token you want to copy to clipboard
@@ -100,7 +100,7 @@ end
 if [ $argv[1] = "bluetooth" ]
 	echo -e "power on" | bluetoothctl
 	sleep 3
-	echo -e "connect 04:CB:88:C8:1D:A4" | bluetoothctl #Replace this with your bluetooth device
+	echo -e "connect " | bluetoothctl #Copy your device id here
 end
 
 #WIFI
