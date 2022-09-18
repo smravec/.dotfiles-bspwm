@@ -13,7 +13,7 @@
 - **Music server** [mpd](https://github.com/MusicPlayerDaemon/MPD)
 
 # Instalation
-
+****this rice was made for framework laptop and may not work on other systems or resolutions (2256x1504)***
 ## Os
 Install Arch with this guide: <a href=Arch-Install.md>Arch-Install.md<a/>
 
@@ -64,6 +64,18 @@ mkdir ~/Downloads \
 create or copy existing .kbx file here and name it passwords.kbx
 ```
 mv your-kbx-file.kbx ~/.dotfiles/config/fish/scripts/passwords.kbx
+```
+for easier easier touchpad on laptop navigation run
+```
+sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
+Section "InputClass"
+        Identifier "touchpad"
+        MatchIsTouchpad "on"
+        Driver "libinput"
+        Option "Tapping" "on"
+EndSection
+
+EOF
 ```
 
 ## Final setup
