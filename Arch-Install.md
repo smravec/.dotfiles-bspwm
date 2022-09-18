@@ -3,7 +3,7 @@
 ### Before install
 1. download arch iso and flash it onto usb stick with BalenaEtcher
 2. plug usb stick into the machine
-3. enter bios by pressing f2 when booting and put the usb stick to the top of the boot order
+3. enter bios by pressing f2 (also might be f6 f10 or del) when booting and put the usb stick to the top of the boot order
 4. save changes, exit and reboot
 
 ## Connect to internet (wifi)
