@@ -117,6 +117,11 @@ nvim
 |ctrl + o| Scroll up |
 |ctrl + p|Scroll down|
 
+## Custom Aliases
+**mdownload** - download media from youtube <br/>
+**dmount** - mount device as user (editable without sudo) <br/>
+**passwords** - open password database with kpcli 
+
 # Gallery
 <div align="center" >
 
