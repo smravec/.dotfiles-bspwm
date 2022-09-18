@@ -86,7 +86,7 @@ cp -r ~/.dotfiles/home-dir/* ~/
 ```
 refresh font cache
 ```
-fc cache -fv
+fc-cache -fv
 ```
 
 ## Term
