@@ -20,8 +20,7 @@ Install Arch with this guide: <a href=Arch-Install.md>Arch-Install.md<a/>
 ## Dotfiles
 Clone this repo to home directory
 ```
-cd ~
-git clone https://github.com/smravec/.dotfiles
+git clone https://github.com/smravec/.dotfiles-bspwm ~/.dotfiles
 ```
 
 ## Dependencies
